@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/static/css/report.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Report</title>
+  </head>
+  <body>
+    <div class="outer">
+      <h1>Report Bluecross</h1>
+      <form action="" method="POST">
+        <label class="head1" for="Select region">Locality</label>
+        <select name="place" id="" style="width: 90%">
+          {%for place in places%}
+          <option value="{{place.place}}">{{place.place}}</option>
+          {%endfor%}
+        </select>
+        <label for="Unique_id">Unique_id</label>
+        <input
+          type="tel"
+          name="Unique_id"
+          id="Unique_id"
+          style="margin: 5px; width: 90%"
+          value="{{unique_id}}"
+        />
+        <label for="Unique_id">Area</label>
+        <input
+          type="tel"
+          name="area"
+          id="area"
+          style="margin: 5px; width: 90%"
+
+        />
+        <label for="Reason of the report">Reason</label>
+        <textarea
+          id="reason"
+          style="margin: 5px; width: 90%"
+          name="reason"
+          rows="5"
+          placeholder="enter vaccinations details in text area"
+        ></textarea>
+        <button type="submit">Send Email</button>
+      </form>
+      {%if error%}
+      <div class="error">
+        <h3>{{error}}</h3>
+      </div>
+      {%endif%} {%if success%}
+      <div class="success">
+        <h3>{{success}}</h3>
+      </div>
+      {%endif%}
+    </div>
+    <footer>
+      <div class="foot">
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/profile.php?id=61557493894451&mibextid=LQQJ4d"
+            target="blank"
+            ><img src="/static/images/facebook1.png" alt="Facebook"
+          /></a>
+          <a href="https://x.com/houndhub74?s=21" target="blank"
+            ><img src="/static/images/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            href="https://www.instagram.com/houndhubs?igsh=cHRqemNpMm40NXk5&utm_source=qr"
+            target="blank"
+            ><img src="/static/images/instagram1.png" alt="Instagram"
+          /></a>
+        </div>
+        <div class="contact-info">
+          <p>Contact us: houndhub74@gmail.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

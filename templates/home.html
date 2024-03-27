@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script>
+      function displayText() {
+        var outerDiv = document.querySelector(".display_area");
+        outerDiv.textContent = "{{about}}";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="heading">
+        <h1>Welcome to HoundHub</h1>
+      </div>
+      <div class="content">
+        <div class="dispaly_details">
+          <div class="grid_container">
+            <div class="item1">
+              <h1>Dog details</h1>
+            </div>
+
+            <div class="item2">Name</div>
+            <div class="item3">{{name}}</div>
+            <div class="item2">Unique_id</div>
+            <div class="item3">{{unique_id}}</div>
+            <div class="item2">Vaccination</div>
+            <div class="item3">{{vaccination}}</div>
+          </div>
+          <button class="button" onclick="displayText()">About Dog</button>
+          <br />
+          <button class="button">
+          <a href="/report?unique_id={{unique_id}}">Report</a></button>
+        </div>
+        <div class="outer">
+          <div class="heading">
+            <h1>About Dog</h1>
+          </div>
+          <div class="display_area"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="foot">
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/profile.php?id=61557493894451&mibextid=LQQJ4d"
+            target="blank"
+            ><img src="/static/images/facebook1.png" alt="Facebook"
+          /></a>
+          <a href="https://x.com/houndhub74?s=21" target="blank"
+            ><img src="/static/images/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            href="https://www.instagram.com/houndhubs?igsh=cHRqemNpMm40NXk5&utm_source=qr"
+            target="blank"
+            ><img src="/static/images/instagram1.png" alt="Instagram"
+          /></a>
+        </div>
+        <div class="contact-info">
+          <p>Contact us: houndhub74@gmail.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

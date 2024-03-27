@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/delete.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="outer">
+        
+        <h1>Delete Database</h1>
+        <form action="" method="POST">
+            <label for="Unique_id">Unique_id</label>
+            <input type="text" name="Unique_id" id="Unique_id">
+            <button type="submit" class="button">Submit</button>
+        </form>
+        {%if error%}
+            <div class="error">
+                <h2>{{error}}</h2>
+            </div>
+        {%endif%}
+        {%if success%}
+            <div class="success">
+                <h2>{{success}}</h2>
+            </div>
+        {%endif%}
+    </div>
+    <footer><div class="foot">
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/profile.php?id=61557493894451&mibextid=LQQJ4d"
+            target="blank"
+            ><img src="/static/images/facebook1.png" alt="Facebook"
+          /></a>
+          <a href="https://x.com/houndhub74?s=21" target="blank"
+            ><img src="/static/images/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            href="https://www.instagram.com/houndhubs?igsh=cHRqemNpMm40NXk5&utm_source=qr" target="blank"
+            ><img src="/static/images/instagram1.png" alt="Instagram"
+          /></a>
+        </div>
+        <div class="contact-info">
+          <p>Contact us: houndhub74@gmail.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+      </div>
+      </footer>
+</body>
+</html>

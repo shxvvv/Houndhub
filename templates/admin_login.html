@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/admin_login.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="outer">
+      <div class="heading">
+        <h1>Dog Details</h1>
+      </div>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>About</th>
+            <th>Vaccination</th>
+            <th>Unique_id</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for data in datas %}
+          <tr>
+            <td>{{data.name}}</td>
+            <td>{{data.about}}</td>
+            <td>{{data.vaccination}}</td>
+            <td>{{data.unique_id}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <div class="foot">
+        <div class="social-media">
+          <a
+            href="https://www.facebook.com/profile.php?id=61557493894451&mibextid=LQQJ4d"
+            target="blank"
+            ><img src="/static/images/facebook1.png" alt="Facebook"
+          /></a>
+          <a href="https://x.com/houndhub74?s=21" target="blank"
+            ><img src="/static/images/twitter.png" alt="Twitter"
+          /></a>
+          <a
+            href="https://www.instagram.com/houndhubs?igsh=cHRqemNpMm40NXk5&utm_source=qr" target="blank"
+            ><img src="/static/images/instagram1.png" alt="Instagram"
+          /></a>
+        </div>
+        <div class="contact-info">
+          <p>Contact us: houndhub74@gmail.com</p>
+          <p>Phone: +1234567890</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
